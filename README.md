@@ -201,7 +201,7 @@ AWS Lambda lets you run code without provisioning or managing servers. You pay o
 
 1.  Navigate back to [developer.amazon.com](http://developer.amazon.com) and select your skill from the list. You can select the skill name or the edit button.
  
-    ![](https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/calendar-reader/calendar-reader-03-001._TTH_.png)
+    ![](https://github.com/kamresh/alexa-calendar-skill/blob/master/images/Alexa%2023.PNG)
 
 2.  Select the Configuration section, and make sure to choose the AWS Lambda ARN region that corresponds to your AWS Lambda function's region.  Add the ARN from the Lambda function you created in the AWS Console earlier. Select the **Lambda ARN (Amazon Resource Name)** radio button. Then, select **“No”** for account linking since we will not be connecting to an external account for this tutorial. Paste the ARN you copied earlier into the Endpoint field. Then select **Next**.
 
@@ -219,15 +219,11 @@ AWS Lambda lets you run code without provisioning or managing servers. You pay o
 
     * In the Service Simulator, type **‘open Stanford Calendar’** and click the **“Ask Stanford Calendar”** button.
 
-    ![](https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/calendar-reader/calendar-reader-04-001._TTH_.png)
+    ![](https://github.com/kamresh/alexa-calendar-skill/blob/master/images/Alexa%2021.png)
 
 2.  You should see the formatted JSON request from the Alexa service and the response coming back from your Lambda function. Verify that you get a correct Lambda response.
   
-    ![](https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/calendar-reader/calendar-reader-04-002._TTH_.png)
- 
-3.  (Optional) Testing with your device. This is optional as you can do all the testing in the portal. Assuming your Echo device is on-line (and logged in with the same account as your developer account), you should now see your skill enabled in the Alexa app (under "Your Skills," in the top right corner) and ask Alexa to launch your skill. For more information on testing an Alexa skill and registering an Alexa-enabled device, [check here](https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/testing-an-alexa-skill).
- 
-    ![](https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/calendar-reader/calendar-reader-04-003._TTH_.png)
+    ![](https://github.com/kamresh/alexa-calendar-skill/blob/master/images/Alexa%2022.png)
   
 ### Skills / Lambda Troubleshooting (getting an invalid response)?
  * Do you have the right ARN copied from your Lambda function into your Developer Portal / Skill?
@@ -235,3 +231,5 @@ AWS Lambda lets you run code without provisioning or managing servers. You pay o
  * Are you saying launch, start or open (followed by your invocation name)?
  * Are you sure you have no other skills in your accounts with the same invocation name?
  
+ References:
+ - Standford Calendar Skill (https://github.com/alexa/skill-sample-nodejs-calendar-reader).
