@@ -179,8 +179,7 @@ AWS Lambda lets you run code without provisioning or managing servers. You pay o
 
     * Keep Handler as ‘index.handler’
     * Drop down the “Role” menu and select **“Create a custom role”**. (Note: if you have already used Lambda you may already have a ‘lambda_basic_execution’ role created that you can use.) This will launch a new tab in the IAM Management Console.
-    
-    ![]https://github.com/kamresh/alexa-calendar-skill/blob/master/images/Alexa%2017.png)
+        
 
 10. You will be asked to set up an Identity and Access Management or “IAM” role if you have not done so. AWS Identity and Access Management (IAM) enables you to securely control access to AWS services and resources for your users. Using IAM, you can create and manage AWS users and groups, and use permissions to allow and deny their access to AWS resources. The IAM role will give your lambda function permission to use other AWS Services at runtime, such as Cloudwatch Logs, the AWS logs collection and storage service. In the Role Summary section, select "Create a new IAM Role" from the IAM Role dropdown menu. The Role Name and policy document will automatically populate.
 
@@ -192,11 +191,11 @@ AWS Lambda lets you run code without provisioning or managing servers. You pay o
 
 12. Keep the Advanced settings as default. Select **‘Next’** and review. You should see something like below. Then select **‘Create Function’**:
 
-    ![](https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/calendar-reader/calendar-reader-02-013._TTH_.png)
+    ![](https://github.com/kamresh/alexa-calendar-skill/blob/master/images/Alexa%2018.png)
 
 13. Congratulations, you have created your AWS Lambda function. **Copy** the Amazon Resource Name (ARN) for use in the Configuration section of the Amazon Developer Portal.
 
-    ![](https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/calendar-reader/calendar-reader-02-014._TTH_.png)
+    ![](https://github.com/kamresh/alexa-calendar-skill/blob/master/images/Alexa%2020.png)
 
 ## Step 3: Add Your Lambda Function to Your Skill
 
