@@ -145,7 +145,7 @@ AWS Lambda lets you run code without provisioning or managing servers. You pay o
 
 1.  **IMPORTANT**: Select **US East (N. Virginia)** region, or the **EU (Ireland)** region (upper right corner). These are the only regions that currently support Alexa Skill development.
 
-    ![](https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/calendar-reader/calendar-reader-02-002._TTH_.png)
+    ![](https://github.com/kamresh/alexa-calendar-skill/blob/master/images/Alexa%209.png)
 
 2.  Select **Lambda** from AWS Services (under Compute)
 
@@ -153,34 +153,34 @@ AWS Lambda lets you run code without provisioning or managing servers. You pay o
 
 3.  Select **“Create a Lambda Function”** to begin the process of defining your Lambda function.
  
-    ![](https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/calendar-reader/calendar-reader-02-004._TTH_.png)
+    ![](https://github.com/kamresh/alexa-calendar-skill/blob/master/images/Alexa%2011.png)
 
 4.  Select the **Blank Function** option on the Select Blueprint screen.
 
-    ![](https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/calendar-reader/calendar-reader-02-005._TTH_.png)
+    ![](https://github.com/kamresh/alexa-calendar-skill/blob/master/images/Alexa%2012.png)
 
 5.  Now, you need to configure the event that will trigger your function to be called. As we are building skills with the Alexa Skills Kit, click on the gray dash-lined box and select Alexa Skills Kit from the dropdown menu.
 
-    ![](https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/calendar-reader/calendar-reader-02-006._TTH_.png)
+    ![](https://github.com/kamresh/alexa-calendar-skill/blob/master/images/Alexa%2013.png)
 
 6.  Choose **Next** to continue.
 
-    ![](https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/calendar-reader/calendar-reader-02-007._TTH_.png)
+    ![](https://github.com/kamresh/alexa-calendar-skill/blob/master/images/Alexa%2014.png)
 
 7.  You should now be in the **"Configure Function"** section. Enter the Name, Description, and Runtime for your skill as in the example below.  Your runtime should be "Node.js 4.3."
 
-    ![](https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/calendar-reader/calendar-reader-02-008._TTH_.png)
+    ![](https://github.com/kamresh/alexa-calendar-skill/blob/master/images/Alexa%2015.png)
 
 8.  Select the **‘Code Entry Type’** as **‘Upload Zip File’** and upload the zip file containing the example you created in Step 1. **Note:** This zip file should contain the contents of the src directory, including the node_modules subfolder.
 
-    ![](https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/calendar-reader/calendar-reader-02-009._TTH_.png)
+    ![](https://github.com/kamresh/alexa-calendar-skill/blob/master/images/Alexa%2016.png)
 
 9.  Set your handler and role as follows:
 
     * Keep Handler as ‘index.handler’
     * Drop down the “Role” menu and select **“Create a custom role”**. (Note: if you have already used Lambda you may already have a ‘lambda_basic_execution’ role created that you can use.) This will launch a new tab in the IAM Management Console.
     
-    ![](https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/calendar-reader/calendar-reader-02-010._TTH_.png)
+    ![]https://github.com/kamresh/alexa-calendar-skill/blob/master/images/Alexa%2017.png)
 
 10. You will be asked to set up an Identity and Access Management or “IAM” role if you have not done so. AWS Identity and Access Management (IAM) enables you to securely control access to AWS services and resources for your users. Using IAM, you can create and manage AWS users and groups, and use permissions to allow and deny their access to AWS resources. The IAM role will give your lambda function permission to use other AWS Services at runtime, such as Cloudwatch Logs, the AWS logs collection and storage service. In the Role Summary section, select "Create a new IAM Role" from the IAM Role dropdown menu. The Role Name and policy document will automatically populate.
 
@@ -236,122 +236,3 @@ AWS Lambda lets you run code without provisioning or managing servers. You pay o
  * Are you saying launch, start or open (followed by your invocation name)?
  * Are you sure you have no other skills in your accounts with the same invocation name?
  
-## Step 5: Make it Yours
- 
-1.  In the Skill Information section in the Developer Console, edit the Skill Information Tab to reflect your new calendar reader skill:
-
-    1.  Provide a skill name that represents the new skill you are creating.
-    2.  Come up with a cool Invocation Name that users will use to invoke your skill. [Make sure to read the rules for creating invocation names](https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/choosing-the-invocation-name-for-an-alexa-skill), as this is a common failure point during certification.
-    3.  Create a fun icon. Be sure you have the rights to whatever icons you are uploading – you will need to provide both 108x108px and 512x512px images. Need help finding an image? Try [The Noun Project](http://thenounproject.com) or [Pixabay](https://pixabay.com/) as a possible source for royalty-free images. Use an image editor (such as Paint on Windows or Preview on Mac) to change the size of the image.
-   
-        Everything else can stay as-is for now in the Developer Portal.
-
-2.  Open the source file for your Lambda function, index.js, in an editor of your choice. This is in the src directory of the repository you downloaded earlier. You will see on line 17 the address of the .ICS file at Stanford. You will want to replace this with the calendar source you're using for your skill.  (If you need ideas for a calendar source, check out [iCalShare](http://icalshare.com/) for a huge list of user created calendars.)
- 
-    ![](https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/calendar-reader/calendar-reader-05-001._TTH_.png)
-  
-3.  Change the skillName variable to the name of your skill.
- 
-    ```JSON
-    var skillName = 'Events calendar:'
-    ```
-    
-4.  You may also want to change the speech responses we've provided.  These are the things Alexa will use to respond to your user's intents, and customizing them will make your skill feel more authentic to your data.  You don’t have to edit them, but we highly recommend making some customizations.  If one of our predefined messages ends with a question, please keep an ending question in your modified message, as Alexa will continue to listen for customer's answer after speaking the message.
-
-    ![](https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/calendar-reader/calendar-reader-05-002._TTH_.png)
-
-5.  AWS Lambda built-in security will make sure only our Alexa service can call your Lambda function. To add an extra layer of security, we should validate the application id in requests made to your function. Let’s go back to your Alexa skill in your Developer Portal for a moment. Copy in your Application ID from the ‘Skill Information’ section in your developer portal / skill:
- 
-    ![](https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/calendar-reader/calendar-reader-05-004._TTH_.png)
-
-6.  Copy the application id into the value of the APP_ID variable. Make sure to place the app id in quotation marks.
- 
-    ![](https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/calendar-reader/calendar-reader-05-003._TTH_.png)
-
-7.  Be sure to select **SAVE** when you are all done. Note: we test initially in the Developer Portal, not in our Lambda function in the AWS console. 
-
-8.  Log back into your AWS console and upload the changes you have just made. First you will need to zip up the files into a new archive. You can do this by selecting the files that you need in the src directory (the node_modules directory and your updated index.js) into a new archive. Be sure that you compress the files in the folder, not the folder itself. 
- 
-9.  Select your Lambda function and on the Code tab, select “Upload” to add the archive you just created.
- 
-    ![](https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/calendar-reader/calendar-reader-05-005._TTH_.png)
-
-10. Once you have successfully added the file you will see it on the screen, then select “Save”.
- 
-11. Repeat the tests you performed earlier to ensure your changes are functioning properly. See step 4 for a review of how to perform functional tests.
-
-## Step 6: Publish Your Skill
-
-Now we need to go back to our Developer Portal to test and edit our skill and we will be ready for certification.
-
-1.  In your skill's Test section, enter your Utterances into the Simulator to make sure everything is working with your new calendar events.
-
-2.  Optionally, you can test with your Alexa-enabled device to make sure everything is working correctly. You may find a few words that need to be changed for a better user experience.
-
-    Some things to think about:
-
-    * Does every event sound correct? 
-    * Do you need to change any words to make them sound correct?
-  
-    Because we could have hundreds of events, this could take a while. Instead, you can use the Voice Simulator in the Test section to simulate Alexa’s responses. In the Voice Simulator, type in each event name that you are using to test how Alexa will say it. Use additional punctuation or possibly SSML if you need to better control how Alexa responds. You can find out more about [SSML here](https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/speech-synthesis-markup-language-ssml-reference).
-    
-    [Read more about functional testing for Alexa skills.](https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-functional-testing)
-    
-    [Read more about building effective voice user interfaces (VUI).](https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-voice-interface-and-user-experience-testing)
-
-    * Have you added in YOUR ApplicationID as per the previous instruction?
-
-3.  Select the Publishing Information area of your skill next:
- 
-    ![](https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/calendar-reader/calendar-reader-06-001._TTH_.png)
- 
-    * Spend some time coming up with an enticing, succinct description. This is the only place you have to attract new users. These descriptions show up on the list of [skills available](http://alexa.amazon.com/#skills) in the Alexa app.
-    * In your example phrases, be sure that the examples you use exactly match the utterances that you created in the Interaction Model section.  The first example should be "Alexa, open {your invocation name}" and no utterance. Remember, there are built-in intents such as help and cancel. You can learn more about [built-in intents here](https://developer.amazon.com/appsandservices/solutions/alexa/alexa-skills-kit/docs/implementing-the-built-in-intents#Available%20Built-in%20Intents). You can also review the list of [supported phrases](https://developer.amazon.com/appsandservices/solutions/alexa/alexa-skills-kit/docs/supported-phrases-to-begin-a-conversation) to begin a conversation.
-    * Be sure you have the rights to whatever icons you are uploading – you will need to provide both 108x108px and 512x512px images. If there is any question, the Amazon certification team will fail your Alexa skill submission.  In the event your skill fails certification, you will receive an email from Amazon's testing team with information about your certification results.
-
-    ![](https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/calendar-reader/calendar-reader-06-002._TTH_.png)
- 
-    Once you have uploaded your icons, you should see a success message at the bottom of the screen.
-
-4.  IMPORTANT: Add the text “This is based on the Calendar Reader Template” to the Testing Instructions section. This alerts the Certification team of your submission using this standardized template, smoothing the road to a faster certification process. Finally, **select Next**.
-
-    ![](https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/calendar-reader/calendar-reader-06-003._TTH_.png)
-   
-6.  Privacy and Compliance.
-
-    1.  On the Privacy and Compliance section, make sure to consider each answer.
-        1.  Since our skill does not require purchases or spending of money, choose "No" for the first question.
-        2.  We don't collect any personal data from our users, so you can also choose "No" for the second question.
-        3.  If your calendar skill is not intended to target children under the age of 13, choose "No" for the third question as well.
-        4.  Choose to certify that your skill can be imported to and exported from the countries and regions that you operate the skill.
-        5.  Privacy and Terms URL’s are optional, but recommended.
-
-    2.  Select **“Save”**.
- 
-    3.  Select “Submit for Certification”
-            
-        ![](https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/calendar-reader/calendar-reader-06-005._TTH_.png)
-   
-    4.  Finally, confirm your submission. Select “Yes” to submit your skill.
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
-   
